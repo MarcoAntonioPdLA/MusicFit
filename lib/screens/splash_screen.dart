@@ -10,13 +10,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(
-      Duration(seconds: 4),
+      Duration(seconds: 3),
       () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => LoginPage(),
-        ),
-      ),
+        context, MaterialPageRoute(
+          builder: (context) => new LoginPage()
+        )
+      )
     );
     super.initState();
   }
@@ -28,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/logo.png"),
+            image: AssetImage('assets/images/logo.png'),
           ),
         ),
       ),
